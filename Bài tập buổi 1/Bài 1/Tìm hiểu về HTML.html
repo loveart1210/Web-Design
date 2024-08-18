@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        h1, h2, h3{
+            text-decoration-color: tomato;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--1. HTML Basic (HTML Cơ bản)-->
+    <h1>
+        1. HTML Basic (HTML Cơ bản)
+    </h1>
+
+    <!--Tag <!DOCTYPE>-->
+    <h2>
+        Tag
+            <code>
+                &lt;!DOCTYPE&gt;
+            </code>
+    </h2>
+
+    <div>
+        Dòng đầu tiên của tất cả các file HTML là
+            <code>
+                &lt;!DOCTYPE html&gt;.
+            </code>
+    </div>
+    
+    <!--Tag <html>-->
+    <h2>
+        Tag
+            <code>
+                &lt;html&gt;
+            </code>
+    </h2>
+
+    <div>
+        File HTML bắt đầu bằng
+            <code>
+                &lt;html&gt;
+            </code>
+        và kết thúc bằng
+            <code>
+                &lt;/html&gt;.
+            </code>
+    </div>
+
+        <!--Tag <head> và <body>-->
+    <h2>
+        Tag
+            <code>
+                &lt;head&gt;
+            </code>
+        và
+            <code>
+                &lt;body&gt;
+            </code>
+    </h2>
+
+    <div>
+        Tag
+            <code>
+                &lt;head&gt;
+            </code>
+        sử dụng để tùy chỉnh nội dung hiển thị của
+            <code>
+                &lt;body&gt;
+            </code>
+        và kết thúc bằng
+            <code>
+                &lt;/head&gt;.
+            </code>
+    <br>
+        Phần hiển thị trên web sẽ nằm trong tag lớn
+            <code>
+                &lt;body&gt;
+            </code>
+        và kết thúc bằng
+            <code>
+                &lt;/body&gt;.
+            </code>
+    </div>
+
+    <!--HTML Headings và Paragraphs (Tiêu đề và văn bản)-->
+    <h2>
+        HTML Headings và Paragraphs (Tiêu đề và văn bản)
+    </h2>
+
+    <div>
+        Tag
+            <code>
+                &lt;h1&gt;, &lt;h2&gt;, ...
+            </code>
+        là heading (tiêu đề);
+            <code>
+                &lt;h1&gt;
+            </code>
+        lớn hơn
+            <code>
+                &lt;h2&gt;, ...
+            </code>
+        <br>
+        Tag
+            <code>
+                &lt;p&gt;
+            </code>
+        là paragraph, dùng để nhập nội dung.
+    </div>
+
+    <!--HTML Links-->
+    <h2>
+        HTML Links
+    </h2>
+
+    <div>
+        Tag
+            <code>
+                &lt;a&gt;
+            </code>
+        là hyperlink (siêu liên kết), sử dụng để đính link. Khi đính link cần có href.
+        <br>
+        Ví dụ:
+            <code>
+                &lt;a&gt; href="đường link">Tên đường link&lt;/a&gt;
+            </code>
+    </div>
+
+    <!--HTML Images (Ảnh)-->
+    <h2>
+        HTML Images (Ảnh)
+    </h2>
+
+    <div>
+        Tag
+            <code>
+                &lt;img&gt;
+            </code>
+        để đính kèm ảnh.
+        <br>
+        Các tag đi kèm:
+        <br>
+            <code>
+                &lt;img&gt;
+            </code>
+        : nguồn ảnh (source).
+        <br>
+            <code>
+                &lt;alt&gt;
+            </code>
+        : văn bản thay thế (xuất hiện khi bị lỗi mạng, dùng để mô tả hình ảnh lúc đó).
+        <br>
+            <code>
+                &lt;width&gt;
+            </code>
+        : chiều rộng.
+        <br>
+            <code>
+                &lt;height&gt;
+            </code>
+        : chiều cao.
+    </div>
+
+    <!--2. HTML Elements (Các phần tử HTML)-->
+    <h1>
+        2. HTML Elements (Các phần tử HTML)
+    </h1>
+
+    <div>
+        Headings và Paragraphs đã có ở phần
+            <mark style="background-color: rgb(255, 189, 241);">
+                1. HTML Basic
+            </mark>
+        <br>
+    <!--Tag <br> (break)-->
+        Tag 
+            <code>
+                &lt;br&gt;
+            </code>
+        (break) : dùng để xuống dòng trong văn bản.
+    </div>
+
+    <!--3. HTML Attribute (Thuộc tính HTML)-->
+    <h1>
+        3. HTML Attribute (Thuộc tính HTML)
+    </h1>
+
+    <!--The style Attribute (Thuộc tính style)-->
+    <h2>
+        The style Attribute (Thuộc tính style)
+    </h2>
+
+    <div>
+        Thuộc tính
+            <code>
+                &lt;style&gt;
+            </code>
+        được sử dụng để thêm kiểu phong cách cho một phần tử, chẳng hạn như màu sắc, phông chữ, kích thước và nhiều thứ khác.
+        <br>
+    </div>
+
+    <div style="background-color: rgb(255, 189, 241);">
+        Ví dụ:
+            <code>
+                &lt;p style="color:red;"&gt;This is a red paragraph.&lt;/p&gt;
+            </code>
+    </div>
+
+    <!--The lang Attribute (Thuộc tính language - ngôn ngữ)-->
+    <h2>
+        The lang Attribute (Thuộc tính language - ngôn ngữ)
+    </h2>
+
+    <div>
+        Thêm thuộc tính lang vào bên trong thẻ
+            <code>
+                &lt;html&gt;
+            </code>
+        để khai báo ngôn ngữ của trang web. Điều này nhằm hỗ trợ các công cụ tìm kiếm và trình duyệt.
+    </div>
+        
+        <div style="background-color: rgb(255, 189, 241);">
+            Ví dụ:
+            <br>
+            <code>
+                &lt;!DOCTYPE html&gt;
+                <br>
+                &lt;html lang="en-US"&gt;
+                <br>
+                &lt;body&gt;
+                <br>
+                ...
+                <br>
+                &lt;/body&gt;
+                <br>
+                &lt;/html&gt;
+            </code>
+    </div>
+
+    <!--The title Attribute (Thuộc tính title - tiêu đề)-->
+    <h2>
+        The title Attribute (Thuộc tính title - tiêu đề)
+    </h2>
+
+    <div>
+        Thuộc tính title định nghĩa một số thông tin bổ sung về một phần tử.
+    </div>
+
+    <div style="background-color: rgb(255, 189, 241);">
+        Ví dụ:
+        <br>
+            <code>
+                &lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;
+            </code>
+        <br>
+            <code>
+                &lt;p title=About W3Schools&gt;&lt;/p&gt;
+            </code>
+    </div>
+
+    <!--4. HTML Paragraphs (Văn bản)-->
+    <h1>
+        4. HTML Paragraphs (Văn bản)
+    </h1>
+    
+    <div>
+        Paragraphs đã có ở phần
+            <mark style="background-color: rgb(255, 189, 241);">
+                1. HTML Basic
+            </mark>
+    </div>
+
+    <!--HTML Horizontal Rules (Thẻ Ngăn Cách Ngang)-->
+    <h2>
+        HTML Horizontal Rules (Thẻ Ngăn Cách Ngang)
+    </h2>
+
+    <div>
+        Thẻ
+            <code>
+                &lt;hr&gt;
+            </code>
+        định nghĩa một ngắt chủ đề trong trang HTML, và thường được hiển thị dưới dạng một đường ngang.
+        <br>
+        Phần tử
+            <code>
+                &lt;hr&gt;
+            </code>
+        được sử dụng để tách nội dung (hoặc định nghĩa một sự thay đổi) trong trang HTML
+    </div>
+
+    <div style="background-color: rgb(255, 189, 241);">
+        Ví dụ:
+        <br>
+        <code>
+            &lt;h1&gt;This is heading 1&lt;/h1&gt;
+        <br>
+            &lt;p&gt;This is some text.&lt;/p&gt;
+        <br>
+            &lt;hr&gt;
+        <br>
+            &lt;h2&gt;This is heading 2&lt;/h2&gt;
+        <br>
+            &lt;p&gt;This is some other text.&lt;/p&gt;
+        <br>
+            &lt;hr&gt;
+        </code>
+    </div>
+
+    <div>
+        <h1>
+            This is heading 1
+        </h1>
+        This is some text.
+        <hr>
+        <h2>
+            This is heading 2
+        </h2>
+        This is some other text.
+        <hr>
+    </div>
+
+    <!--HTML Line Breaks (Ngắt dòng)-->
+    <h2>
+        HTML Line Breaks (Ngắt dòng)
+    </h2>
+
+    <div>
+        Sử dụng
+            <code>
+                &lt;br&gt;
+            </code>
+        để xuống dòng (một dòng mới) mà không bắt đầu một đoạn mới.
+        <br>
+        Cách sử dụng tương tự
+            <code>
+                &lt;hr&gt;
+            </code>
+    </div>
+
+    <!--Solution - The HTML <pre> Element (Giải pháp - Phần tử HTML <pre>)-->
+    <h2>
+        Solution - The HTML
+            <code>
+                &lt;pre&gt;
+            </code>
+        Element (Giải pháp - Phần tử
+            <code>
+                &lt;pre&gt;
+            </code>
+        HTML)
+    </h2>
+
+    <div>
+        Phần tử HTML
+            <code>
+                &lt;pre&gt;
+            </code>
+        định nghĩa văn bản đã được định dạng trước.
+        <br>
+        Văn bản bên trong phần tử
+            <code>
+                &lt;pre&gt;
+            </code>
+        được hiển thị bằng phông chữ cố định (thường là Courier), và nó giữ nguyên cả khoảng trắng và ngắt dòng.
+    </div>
+
+    <div style="background-color: rgb(255, 189, 241);">
+        Ví dụ:
+        <pre>
+            <code>
+&lt;pre&gt;
+My Bonnie lies over the ocean.
+
+My Bonnie lies over the sea.
+          
+My Bonnie lies over the ocean.
+          
+Oh, bring back my Bonnie to me.
+&lt;/pre&gt;
+            </code>
+        </pre>
+    </div>
+
+    <!--5. HTML Style (Phong cách)-->
+    <h1>
+        5. HTML Styles (Phong cách)
+    </h1>
+
+    <div>
+        Đã có trong phần
+            <mark style="background-color: rgb(255, 189, 241);">
+                3. HTML Attribute (Thuộc tính HTML)
+            </mark>
+    </div>
+
+    <!--6. HTML Text Formatting (Định dạng văn bản)-->
+    <h1>
+        6. HTML Text Formatting (Định dạng văn bản)
+    </h1>
+
+    <div>
+        <!--Bold text (Chữ in đậm)-->
+        <code>
+            &lt;b&gt;
+        </code>:
+            <b> Bold text (Chữ in đậm) </b>
+    <br>
+        <!--Important text (Quan trọng)-->
+        <code>
+            &lt;strong&gt;
+        </code>:
+            <strong> Important text (Quan trọng) </strong>
+    <br>
+        <!--Italic text (Chữ nghiêng)-->
+        <code>
+            &lt;i&gt;
+        </code>:
+            <i> Italic text (Chữ nghiêng) </i>
+    <br>
+        <!--Emphasized text (Chữ nhấn mạnh)-->
+        <code>
+            &lt;em&gt;
+        </code>:
+            <em> Emphasized text (Chữ nhấn mạnh) </em>
+    <br>
+        <!--Marked text (Văn bản được đánh dấu)-->
+        <code>
+            &lt;mark&gt;
+        </code>:
+            <mark> Marked text (Văn bản được đánh dấu) </mark> 
+    <br>
+        <!--Smaller text (Văn bản nhỏ hơn)-->
+        <code>
+            &lt;small&gt;
+        </code>:
+            <small> Smaller text (Văn bản nhỏ hơn) </small>
+    <br>
+        <!--Deleted text (Văn bản đã xóa)-->
+        <code>
+            &lt;del&gt;
+        </code>:
+            <del> Deleted text (Văn bản đã xóa) </del>
+    <br>
+        <!--Inserted text (Văn bản được chèn)-->
+            <ins> Inserted text (Văn bản được chèn) </ins>
+    <br>
+        <!--Subscript text (Chữ viết dưới)-->
+        <code>
+            &lt;sub&gt;
+        </code>:
+            <sub> Subscript text (Chữ viết dưới) </sub>
+    <br>
+        <!--Superscript text (Chữ viết trên) -->
+        <code>
+            &lt;sup&gt;
+        </code>:
+            <sup> Superscript text (Chữ viết trên) </sup>
+    </div>
+
+    <!--7. HTML Quotation and Citation Elements (Các Phần Tử Trích Dẫn và Trích Nguồn trong HTML)-->
+    <h1>
+        7. HTML Quotation and Citation Elements (Các Phần Tử Trích Dẫn và Trích Nguồn trong HTML)
+    </h1>
+
+    <!--Abbreviations (Viết tắt)-->
+    <h2>
+        Abbreviations (Viết tắt)
+    </h2>
+
+    <div>
+            <code>
+                &lt;abbr&gt;
+            </code>
+        : Xác định một từ viết tắt hoặc từ viết tắt.
+    </div>
+
+    <!--Contact Information (Thông tin liên hệ)-->
+    <h2>
+        Contact Information (Thông tin liên hệ)
+    </h2>
+
+    <div>
+            <code>
+                &lt;address&gt;
+            </code>
+        : Xác định thông tin liên hệ của tác giả/chủ sở hữu tài liệu.
+    </div>
+
+    <!--Bi-Directional Override (Hướng của văn bản)-->
+    <h2>
+        Bi-Directional Override (Hướng của văn bản)
+    </h2>
+
+    <div>
+            <code>
+                &lt;bdo&gt;
+            </code>
+        : Xác định hướng của văn bản.
+    </div>
+    
+    <div style="background-color: rgb(255, 189, 241);">
+        Ví dụ:
+        <br>
+            <code>
+                &lt;bdo dir="rtl"&gt;This line will be written from right to left&lt;/bdo&gt;
+            </code>
+        <br>
+        Kết quả hiển thị:
+            <bdo
+                dir="rtl";
+                style="background-color: rgb(247, 129, 109);">
+                    This line will be written from right to left
+            </bdo>
+    </div>
+
+    <!--Quotations (Trích dẫn)-->
+    <h2>
+        Quotations (Trích dẫn)
+    </h2>
+
+    <div>
+            <code>
+                &lt;blockquote&gt;
+            </code>
+        : Xác định một đoạn trích dẫn từ nguồn khác.
+    </div>
+
+    <div style="background-color: rgb(255, 189, 241);">
+        Ví dụ:
+        <br>
+        <code>
+            &lt;p&gt;Here is a quote from WWF's website:&lt;/p&gt;
+            <br>
+            &lt;blockquote cite="http://www.worldwildlife.org/who/index.html"&gt;
+            <br>
+            For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in
+            nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions
+            that protect communities, wildlife, and the places in which they live.
+            <br>
+            &lt;/blockquote&gt;
+        </code>
+    </div>
+
+    <div>
+        Kết quả:
+        <br>
+        Here is a quote from WWF's website:
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works
+        in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative
+        solutions that protect communities, wildlife, and the places in which they live.
+            </blockquote>
+    </div>
+
+    <!--Work Title (Tiêu đề)-->
+    <h2>
+        Work Title (Tiêu đề)
+    </h2>
+
+    <div>
+        Tiêu đề của một tác phẩm sáng tạo (ví dụ: sách, bài thơ, bài hát, bộ phim, bức tranh, tác phẩm điêu khắc, v.v.).
+        <b>
+            Lưu ý: Tên của một người không phải là tiêu đề của một tác phẩm.
+        </b>
+    </div>
+
+    <div style="background-color: rgb(255, 189, 241);">
+        <code>
+            &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch. Painted in 1893.&lt;/p&gt;
+        </code>
+    </div>
+
+    <div>
+        Kết quả:
+            <cite>
+                The Scream
+            </cite>
+        by Edvard Munch. Painted in 1893.
+    </div>
+
+    <!--Short Quotations (Trích dẫn ngắn)-->
+    <h2>
+        Short Quotations (Trích dẫn ngắn)
+    </h2>
+
+    <div>
+        Xác định một trích dẫn ngắn trong dòng.
+    </div>
+
+    <div style="background-color: rgb(255, 189, 241);">
+        Ví dụ:
+        <br>
+        <code>
+            &lt;p&gt;WWF's goal is to: &lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;&lt;/p&gt;
+        </code>
+    </div>
+
+    <div>
+        Kết quả:
+        WWF's goal is to: <q>Build a future where people live in harmony with nature.</q>
+    </div>
+
+    <!--8. HTML Comments (Chú thích)-->
+    <h1>
+        8. HTML Comments (Chú thích)
+    </h1>
+
+    <div>
+        Các bình luận HTML không được hiển thị trong trình duyệt, nhưng chúng có thể giúp ghi chú mã nguồn HTML của bạn.
+    </div>
+
+    <div>
+        Ví dụ:
+        <br>
+        <code>
+            &lt;!-- Write your comments here --&gt;
+        </code>
+    </div>
+
+    <!--9. HTML Colors (Màu sắc)-->
+    <h1>
+        9. HTML Colors (Màu sắc)
+    </h1>
+
+    <div>
+        Màu sắc trong HTML được xác định bằng các tên màu định sẵn, hoặc bằng các giá trị RGB, HEX, HSL, RGBA, hoặc HSLA.
+        <br>
+        Sử dụng thẻ
+            <code>
+                &lt;style&gt;
+            </code>
+        để chọn màu cho các mục đích cụ thể như: màu nền văn bản, màu chữ, ...
+    </div>
+
+    <!--HTML Styles - CSS-->
+    <h1>
+        10. HTML Styles - CSS
+    </h1>
+
+    <div>
+        CSS là viết tắt của Cascading Style Sheets (Các tệp kiểu dáng xếp chồng).
+        <br>
+        CSS được sử dụng để định dạng bố cục, thiết kế một trang web.
+    </div>
+
+    <div>
+        CSS có thể được thêm vào tài liệu HTML theo 3 cách:
+        <br>
+        <ul>
+            <li> Inline - bằng cách sử dụng thuộc tính <code> &lt;style&gt; </code> bên trong các phần tử HTML. </li>
+        <br>
+            <li> Internal - bằng cách sử dụng phần tử <code> &lt;style&gt; </code> phần <code> &lt;head&gt; </code>. </li>
+        <br>
+            <li> External - bằng cách sử dụng phần tử <code> &lt;link&gt; </code> để liên kết tới một tệp CSS bên ngoài. </li>
+        </ul>
+        Cách phổ biến nhất để thêm CSS là giữ các kiểu dáng trong các tệp CSS bên ngoài.
+    </div>
+
+    <div>
+        Sử dụng thuộc tính style của HTML để áp dụng kiểu nội tuyến (inline styling).
+        <br>
+        Sử dụng phần tử <code> &lt;style&gt; </code> của HTML để định nghĩa CSS nội bộ (internal CSS).
+        <br>
+        Sử dụng phần tử <code> &lt;link&gt; </code> của HTML để tham chiếu đến tệp CSS bên ngoài.
+        <br>
+        Sử dụng phần tử <code> &lt;head&gt; </code> của HTML để lưu trữ các phần tử <code> &lt;style&gt; </code> và <code> &lt;link&gt; </code>.
+        <br>
+        Sử dụng thuộc tính CSS color để định dạng màu văn bản.
+        <br>
+        Sử dụng thuộc tính CSS font-family để chọn kiểu chữ cho văn bản.
+        <br>
+        Sử dụng thuộc tính CSS font-size để xác định kích thước chữ.
+        <br>
+        Sử dụng thuộc tính CSS border để định dạng các đường viền.
+        <br>
+        Sử dụng thuộc tính CSS padding để tạo khoảng cách bên trong đường viền.
+        <br>
+        Sử dụng thuộc tính CSS margin để tạo khoảng cách bên ngoài đường viền.
+    </div>
+
+    <!--11. HTML Links-->
+    <h1>
+        11. HTML Links
+    </h1>
+
+    <div>
+        Sử dụng phần tử <code> &lt;a&gt; </code> để định nghĩa một liên kết.
+        <br>
+        Sử dụng thuộc tính href để xác định địa chỉ liên kết.
+        <br>    
+        Sử dụng thuộc tính target để xác định nơi mở tài liệu liên kết.
+        <br>
+        Sử dụng phần tử <code> &lt;img&gt; </code> (bên trong <code> &lt;a&gt; </code>) để sử dụng hình ảnh làm liên kết.
+        <br>
+        Sử dụng cấu trúc mailto: bên trong thuộc tính href để tạo liên kết mở chương trình email của người dùng.
+    </div>
+
+    <!--12. HTML Images (Ảnh)-->
+    <h1>
+        12. HTML Images (Ảnh)
+    </h1>
+
+    <div>
+        Sử dụng phần tử <code> &lt;img&gt; </code> của HTML để định nghĩa một hình ảnh.
+        <br>
+        Sử dụng thuộc tính src của HTML để xác định URL của hình ảnh.
+        <br>
+        Sử dụng thuộc tính alt của HTML để định nghĩa văn bản thay thế cho hình ảnh nếu hình ảnh không thể hiển thị.
+        <br>
+        Sử dụng thuộc tính width và height của HTML hoặc các thuộc tính width và height của CSS để xác định kích thước của hình ảnh.
+        <br>
+        Sử dụng thuộc tính float của CSS để làm cho hình ảnh nổi về bên trái hoặc bên phải.
+    </div>
+
+    <!--13. HTML Favicon (Biểu tượng web)-->
+    <h1>
+        13. HTML Favicon (Biểu tượng web)
+    </h1>
+
+    <div>
+        Favicon là một hình ảnh nhỏ hiển thị bên cạnh tiêu đề trang trong tab của trình duyệt.
+        <br>
+        <code> &lt;link&gt; </code> Định nghĩa mối quan hệ giữa một tài liệu và một tài nguyên bên ngoài.
+    </div>
+
+    <div style="background-color: rgb(255, 189, 241);">
+        Ví dụ:
+        <br>
+        <code> &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico" &gt; </code>
+    </div>
+
+    <!--14. HTML Tables (Bảng)-->
+    <h1>
+        14. HTML Tables (Bảng)
+    </h1>
+
+    <div>
+        <code> &lt;table&gt; </code>: Định nghĩa một bảng.
+        <br>
+        <code> &lt;th&gt; </code>: Định nghĩa một ô tiêu đề trong bảng.
+        <br>
+        <code> &lt;tr&gt; </code>: Định nghĩa một hàng trong bảng.
+        <br>
+        <code> &lt;td&gt; </code>: Định nghĩa một ô trong bảng.
+        <br>
+        <code> &lt;caption&gt; </code>: Định nghĩa chú thích của bảng.
+        <br>
+        <code> &lt;colgroup&gt; </code>: Xác định một nhóm gồm một hoặc nhiều cột trong bảng để định dạng.
+        <br>
+        <code> &lt;col&gt; </code>: Xác định thuộc tính cột cho mỗi cột trong phần tử <colgroup>.
+        <br>    
+        <code> &lt;thead&gt; </code>: Nhóm nội dung tiêu đề trong bảng.
+        <br>
+        <code> &lt;tbody&gt; </code>: Nhóm nội dung thân bảng.
+        <br>    
+        <code> &lt;tfoot&gt; </code>: Nhóm nội dung chân bảng.
+    </div>
+
+    <!--15. HTML Lists (Danh sách)-->
+    <h1>
+        15. HTML Lists (Danh sách)
+    </h1>
+
+    <div>
+        <code> &lt;ul&gt; </code>: Định nghĩa một danh sách không có thứ tự.
+        <br>
+        <code> &lt;ol&gt; </code>: Định nghĩa một danh sách có thứ tự.
+        <br>
+        <code> &lt;li&gt; </code>: Định nghĩa một mục trong danh sách.
+        <br>
+        <code> &lt;dl&gt; </code>: Định nghĩa một danh sách mô tả.
+        <br>
+        <code> &lt;dt&gt; </code>: Định nghĩa một thuật ngữ trong danh sách mô tả.
+        <br>
+        <code> &lt;dd&gt; </code>: Mô tả thuật ngữ trong danh sách mô tả.
+    </div>
+
+    <!--16. HTML Block and Inline Elements (Các phần tử Block và Inline trong HTML)-->
+    <h1>
+        16. HTML Block and Inline Elements (Các phần tử Block và Inline trong HTML)
+    </h1>
+
+    <div>
+        <code> &lt;div&gt; </code>: Định nghĩa một phần trong tài liệu (cấp khối - block-level).
+        <br>
+        <code> &lt;span&gt; </code>: Định nghĩa một phần trong tài liệu (cấp dòng - inline).
+    </div>
+
+</body>
+
+</html>
