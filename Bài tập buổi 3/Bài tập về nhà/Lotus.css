@@ -44,3 +44,7 @@ a:link {
     margin-left: auto;
     margin-right: auto;
 }
+img{
+    width: 100%;
+    height: auto;
+}
