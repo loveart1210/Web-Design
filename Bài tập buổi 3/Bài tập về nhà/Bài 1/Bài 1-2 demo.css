@@ -1,0 +1,27 @@
+body {
+    font-family: sans-serif;
+}
+a {
+    background-color: #07b374;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+a:hover {
+    background-color: #099964;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);;
+}
+#anh {
+    width: 500px;
+    height: auto;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.head {
+    font-size: 30px;
+}
+
