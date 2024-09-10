@@ -1,0 +1,863 @@
+<style>
+    
+    code {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+    body {
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #edf4f2;
+
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    overflow-y: auto;
+    flex-grow: 1;
+    width: 200px;
+    background-color: #FFFFFF;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    padding-top: 20px;
+    margin-top: 108px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.sidebar ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+    padding: 5px 15px;
+    border-radius: 2px;
+    color: #ffffff;
+}
+
+.content {
+    margin-top: 50px;
+    margin-left: 220px; 
+    padding: 40px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.content section {
+    margin-bottom: 20px;
+}
+
+.content section h2 {
+    color: #333;
+    border-bottom: 2px solid #797373;
+    padding-bottom: 5px;
+}
+
+.content section p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+h1 { 
+            background-color: rgb(35, 238, 35);
+            padding: 25px;
+            border-radius: 5px;
+            
+        }
+    div img {
+        border-radius: 5px;
+        padding-left: 20px;
+
+    }
+    table {
+            width: 600px; 
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+
+        .navbar {
+       
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo img {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+.navbar-menu li a:hover {
+    background-color: #04AA6D;
+    padding: 27px 5px;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1.5px solid #a7a5a5;
+    border-radius: 13px;
+    outline: none; 
+    transition: border 0.1s ease;
+}
+.search-bar input:focus {
+    border: 2.5px solid #0aa86e;
+}
+
+    
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-icons a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+.navbar-icons a:hover{
+    background-color: #ecebeb;
+    border-radius: 15px;
+    padding: 10px;
+}
+.navbar-icons .sign-up {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.navbar-languages {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #454750;
+    padding: 10px 0;
+}
+
+.navbar-languages li {
+    margin: 0 10px;
+}
+
+.navbar-languages li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar-languages li a:hover {
+    padding: 10px 10px;
+    background-color: #141414;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    display: inline-block;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+#backToTopBtn:hover {
+    background-color: #04AA6D;
+}
+</style>
+<!DOCTYPE html>
+<html lang="">
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./imgb4/W3Schools_logo.svg.png">
+    <title>HTML Tutorial</title>
+</head>
+<body>
+    <a href="#" id="backToTopBtn"><i class="fas fa-arrow-up"></i>
+    </a>
+    <div style="position: fixed; width: 100%;">
+        <div class="navbar">
+            <div class="navbar-logo">
+                <a href="https://www.w3schools.com/"><img src="./imgb4/W3Schools_logo.svg.png" alt="Logo"></a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="https://www.w3schools.com/html/default.asp#gsc.tab=0">Tutorials</a></li>
+                <li><a href="https://www.w3schools.com/html/exercise.asp?filename=exercise_html_attributes1">Exercises</a></li>
+                <li><a href="https://campus.w3schools.com/collections/certifications/products/html-certificate">Certificates</a></li>
+                <li><a href="https://www.w3schools.com/tutorials/index.php">Services</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit" >🔍</button>
+            </div>
+            <div class="navbar-icons">
+                <a href="https://www.w3schools.com/plus/index.php">Plus</a>
+                <a href="https://www.w3schools.com/spaces/index.php">Spaces</a>
+                <a href="https://campus.w3schools.com/collections/course-catalog">Get Certified</a>
+                <a href="https://profile.w3schools.com/signup?redirect_url=https%3A%2F%2Fwww.w3schools.com%2Fspaces%2Findex.php" class="sign-up">Sign Up</a>
+                <a href="https://profile.w3schools.com/login?redirect_url=https%3A%2F%2Fwww.w3schools.com%2Fspaces%2Findex.php">Log in</a>
+            </div>
+        </div>
+    
+        <ul class="navbar-languages">
+            <li><a href="https://www.w3schools.com/html/default.asp">HTML</a></li>
+            <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+            <li><a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+            <li><a href="https://www.w3schools.com/sql/default.asp">SQL</a></li>
+            <li><a href="https://www.w3schools.com/python/default.asp">Python</a></li>
+            <li><a href="https://www.w3schools.com/java/default.asp">Java</a></li>
+            <li><a href="https://www.w3schools.com/php/default.asp">PHP</a></li>
+            <li><a href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp">Bootstrap</a></li>
+            <li><a href="https://www.w3schools.com/react/default.asp">React</a></li>
+            <li><a href="https://www.w3schools.com/mysql/default.asp">MySQL</a></li>
+            <li><a href="https://www.w3schools.com/jquery/default.asp">jQuery</a></li>
+            <li><a href="https://www.w3schools.com/xml/default.asp">XML</a></li>
+            <li><a href="https://www.w3schools.com/django/index.php">DJANGO</a></li>
+            <li><a href="https://www.w3schools.com/excel/index.php">EXEL</a></li>
+            <li><a href="https://www.w3schools.com/python/numpy/default.asp">NUMPY</a></li>
+          
+                </ul>
+    
+    </div>
+    
+
+
+    
+    <div class="container">
+        <h3>HTML Tutorial</h3> 
+        <nav class="sidebar">
+            <ul style="list-style-type: none;"> 
+                <li><a href="#ba" style="font-size: 20px;font-weight: 700;">HTML Basic</a></li>
+                <li><a href="#el">HTML Elements</a></li>
+                <li><a href="#at">HTML Attributes</a></li>
+                <li><a href="#he">HTML Headings</a></li>
+                <li><a href="#pa">HTML Paragraphs</a></li>
+                <li><a href="#st">HTML Styles</a></li>
+                <li><a href="#fo">HTML Formatting</a></li>
+                <li><a href="#qu">HTML Quotations</a></li>
+                <li><a href="#co">HTML Comments</a></li>
+                <li><a href="#col">HTML Colors</a></li>
+                <li><a href="#li">HTML Links</a></li>
+                <li><a href="#im">HTML Images</a></li>
+                <li><a href="#ta">HTML Tables</a></li>
+                <li><a href="#lis">HTML Lists</a></li>
+                <li><a href="#bl">HTML Block&Inline</a></li>
+                <li><a href="">HTML Id</a></li>
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTML Iframes</a></li>
+<li><a href="">HTML JavaScript</a></li>
+<li><a href="">HTML File Paths</a></li>
+<li><a href="">HTML Head</a></li>
+<li><a href="">HTML Layout</a></li>
+<li><a href="">HTML Responsive</a></li>
+<li><a href="">HTML Computercode</a></li>
+<li><a href="">HTML Semantics</a></li>
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTML Style Guide</a></li>
+<li><a href="">HTML Entities</a></li>
+<li><a href="">HTML Symbols</a></li>
+<li><a href="">HTML Emojis</a></li>
+<li><a href="">HTML Charsets</a></li>
+<li><a href="">HTML URL Encode</a></li>
+<li><a href="">HTML vs. XHTML</a></li>
+
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTML Forms</a></li>
+<li><a href="">HTML Form Attributes</a></li>
+<li><a href="">HTML Form Elements</a></li>
+<li><a href="">HTML Input Types</a></li>
+<li><a href="">HTML Input Attributes</a></li>
+<li><a href="">Input Form Attributes</a></li>
+
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTML Graphics</a></li>
+<li><a href="">HTML Canvas</a></li>
+<li><a href="">HTML SVG</a></li>
+
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTML Media</a></li>
+<li><a href="">HTML Video</a></li>
+<li><a href="">HTML Audio</a></li>
+<li><a href="">HTML Plug-ins</a></li>
+<li><a href="">HTML YouTube</a></li>
+
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTML APIs</a></li>
+<li><a href="">HTML Geolocation</a></li>
+<li><a href="">HTML Drag/Drop</a></li>
+<li><a href="">HTML Web Storage</a></li>
+<li><a href="">HTML Web Workers</a></li>
+<li><a href="">HTML SSE</a></li>
+
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTML Examples</a></li>
+<li><a href="">HTML Editor</a></li>
+<li><a href="">HTML Quiz</a></li>
+<li><a href="">HTML Exercises</a></li>
+<li><a href="">HTML Website</a></li>
+<li><a href="">HTML Interview Prep</a></li>
+<li><a href="">HTML Bootcamp</a></li>
+<li><a href="">HTML Certificate</a></li>
+<li><a href="">HTML Summary</a></li>
+<li><a href="">HTML Accessibility</a></li>
+
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTML References</a></li>
+<li><a href="">HTML Tag List</a></li>
+<li><a href="">HTML Attributes</a></li>
+<li><a href="">HTML Global Attributes</a></li>
+<li><a href="">HTML Browser Support</a></li>
+<li><a href="">HTML Events</a></li>
+<li><a href="">HTML Colors</a></li>
+<li><a href="">HTML Canvas</a></li>
+<li><a href="">HTML Audio/Video</a></li>
+<li><a href="">HTML Doctypes</a></li>
+<li><a href="">HTML Character Sets</a></li>
+<li><a href="">HTML URL Encode</a></li>
+<li><a href="">HTML Lang Codes</a></li>
+<li><a href="" style="font-size: 20px;font-weight: 700;">HTTP Messages</a></li>
+<li><a href="">HTTP Methods</a></li>
+<li><a href="">PX to EM Converter</a></li>
+<li><a href="">Keyboard Shortcuts</a></li>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <section id="ba">
+            <h1 >HTML Basic </h1>
+            <p>HTML is the standard markup language for creating Web pages.</p>
+            <h2>HTML Documents</h2>
+                <p>All HTML documents must start with a document type declaration: <code>&lt;!DOCTYPE html&gt;</code>.</p>
+                <p>The HTML document itself begins with <code>&lt;html&gt;</code> and ends with <code>&lt;/html&gt;</code>.</p>
+                <p>The visible part of the HTML document is between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>.</p>
+             
+             <img src="/b1img/1.PNG" alt="">
+            <h2>The <code>&lt;!DOCTYPE html&gt;</code> Declaration</h2>
+            <p>The <code>&lt;!DOCTYPE html&gt;</code> declaration represents the document type, and helps browsers to display web pages correctly.</p>
+            <p>It must only appear once, at the top of the page (before any HTML tags).</p>
+            <p>The <code>&lt;!DOCTYPE html&gt;</code> declaration is not case sensitive.</p>
+            <p>The <code>&lt;!DOCTYPE html&gt;</code> declaration for HTML5 is:</p>
+            <img src="/b1img/2.PNG" alt="">
+        
+            <h2>HTML Headings</h2>
+            <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.</p>
+            <p><code>&lt;h1&gt;</code> defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading</p>
+            <img src="/b1img/3.PNG" alt="">
+        
+            <h2>HTML Paragraphs</h2>
+            <p>HTML paragraphs are defined with the <code>&lt;p&gt;</code> tag:</p>
+            <img src="/b1img/4.PNG" alt="">
+        
+            <h2>HTML Links</h2>
+            <p>HTML links are defined with the <code>&lt;a&gt;</code> tag:</p>
+            <img src="/b1img/5.PNG" alt="">
+            <p>The link's destination is specified in the href attribute. 
+                Attributes are used to provide additional information about HTML elements.</p>
+        
+            <h2>HTML Images</h2>
+            <p>HTML images are defined with the <code>&lt;img&gt;</code> tag.</p>
+            <p>The source file (src), alternative text (alt), width, and height are provided as attributes:</p>
+            <img src="/b1img/6.PNG" alt="">
+            <h2>How to View HTML Source</h2>
+            <h4>View HTML Source Code:</h4>
+            <p>Click CTRL + U in an HTML page, or right-click on the page and select "View Page Source". This will open a new tab containing the HTML source code of the page.</p>
+            <h4>Inspect an HTML Element:</h4>
+            <p>Right-click on an element (or a blank area), and choose "Inspect" to see what elements are made up of (you will see both the HTML and the CSS). You can also edit the HTML or CSS on-the-fly in the Elements or Styles panel that opens.</p>
+        </section>
+
+        <section id="el">
+            <h1>HTML Elements</h1>
+            <p>An HTML element is defined by a start tag, some content, and an end tag.</p>
+            <p>The HTML element is everything from the start tag to the end tag:</p>
+            <h5 style="font-size: 20;"><code>&lt;strong&gt;</code>Content goes here...<code>&lt;strong&gt;</code></h5>
+            <p>Examples:</p>
+            <table border="1" width="500" >
+                <tr>
+                  <td>&lt;h1&gt;</td>
+                  <td>My First Heading</td>
+                  <td>&lt;/h1&gt;</td>
+                </tr>
+                <tr>
+                  <td>&lt;p&gt;</td>
+                  <td>My first paragraph.</td>
+                  <td>&lt;/p&gt;</td>
+                </tr>
+                <tr>
+                  <td>&lt;br&gt;</td>
+                  <td>none</td>
+                  <td>none</td>
+                </tr>
+              </table>
+              
+            <p><b>Note</b>: Some HTML elements have no content (like the <code>&lt;br&gt;</code> element). These elements are called empty elements. Empty elements do not have an end tag!</p>
+            <h2>Nested HTML Elements</h2>
+            <p>HTML elements can be nested. All HTML documents consist of nested HTML elements. </p>
+            
+                <img src="/b1img/7.PNG" alt="">
+                <p> </p>
+                <img src="/b1img/8.PNG" alt="">
+                
+                
+            <h2>Never Skip the End Tag</h2>
+            <p>Some HTML elements will display correctly, even if you forget the end tag:</p>
+            <img src="/b1img/12.PNG" alt="">
+            <p>However, never rely on this! Unexpected results and errors may occur if you forget the end tag!</p>
+            <h2>Empty HTML Elements</h2>
+            <p>HTML elements with no content are called empty elements.</p>
+            <p>The <code>&lt;br&gt;</code> tag defines a line break, and is an empty element without a closing tag:</p>
+            <img src="/b1img/13.PNG" alt="">
+            <h2>HTML is Not Case Sensitive</h2>
+            <p>HTML tags are not case sensitive: <P> means the same as <p>.
+
+             <br>The HTML standard does not require lowercase tags, but W3C recommends lowercase in HTML, and demands lowercase for stricter document types like XHTML.</p>
+        </section>
+
+        <section id="at">
+            <h1>HTML Attributes</h1>
+            <p>HTML attributes provide additional information about HTML elements.</p>
+            <h2>HTML Attributes</h2>
+            <ul>
+                <li>All HTML elements can have attributes</li>
+                <li>Attributes provide additional information about elements</li>
+                <li>Attributes usually come in name/value pairs like: name="value"</li>
+                <li>Attributes are always specified in the start tag</li>
+            </ul>
+            <h2>The href Attribute</h2>
+            <p>The <code>&lt;a&gt;</code> tag defines a hyperlink. The href attribute specifies the URL of the page the link goes to:</p>
+             <img src="/b1img/a1.PNG" alt="">
+            <h2>The src Attribute</h2>
+            <p>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:</p>
+             <img src="/b1img/a2.PNG" alt="">
+            <p>There are two ways to specify the URL in the src attribute:</p>
+            <h3>1. Absolute URL:</h3>
+            <p>An absolute URL specifies the full path to the resource, including the protocol (such as http://, https://, etc.), domain name, and possibly the directory structure.</p>
+            
+            <p>Explanation: This will load the image from the exact location specified by the URL, regardless of where the HTML file is hosted.</p>
+            <h3>2. Relative URL:</h3>
+            <p>A relative URL specifies the path to the resource relative to the current document or the current domain. There are two types of relative URLs:</p> 
+            <h5>a. Relative to the current document</h5>
+            
+            <h5>b. Relative to the root of the website</h5>
+            
+            <h2>The width and height Attributes</h2>
+            <p>The <code>&lt;img&gt;</code> tag should also contain the width and height attributes, which specify the width and height of the image (in pixels):</p>
+            <img src="/b1img/a3.PNG" alt="">
+            <h2>The alt Attribute</h2>
+            <p>The required alt attribute for the <code>&lt;img&gt;</code> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.</p>
+            <img src="/b1img/a4.PNG" alt="">
+            <h2>The style Attribute</h2>
+            <p>The style attribute is used to add styles to an element, such as color, font, size, and more.</p>
+            <img src="/b1img/a5.PNG" alt="">
+            <h2>The lang Attribute</h2>
+            <p>You should always include the lang attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
+                <br>The following example specifies English as the language:</p>
+            <img src="/b1img/a6.PNG" alt="">
+            <h2>The title Attribute</h2>
+            <p>The title attribute defines some extra information about an element. <br> The value of the title attribute will be displayed as a tooltip when you mouse over the element:</p>
+            <img src="/b1img/a7.PNG" alt="">
+        </section>
+
+
+
+        <section id="he">
+            <h1>HTML Headings</h1>
+            <p>HTML headings are titles or subtitles that you want to display on a webpage.</p>
+            <img src="/b1img/h1.PNG" alt="">
+            <h2>HTML Headings</h2>
+            <p>HTML headings are defined with the <code>&lt;h1&gt;</code>  to <code>&lt;h6&gt;</code>  tags. <br><code>&lt;h1&gt;</code>  defines the most important heading. <code>&lt;h6&gt;</code>  defines the least important heading.</p>
+            <img src="/b1img/h2.PNG" alt="">
+            <h2>Headings Are Important</h2>
+            <p>Search engines use the headings to index the structure and content of your web pages.</p>
+            <p>Users often skim a page by its headings. It is important to use headings to show the document structure.</p>
+            <p><code>&lt;h1&gt;</code>  headings should be used for main headings, followed by <code>&lt;h2&gt;</code>  headings, then the less important <code>&lt;h3&gt;</code> , and so on.</p>
+            <p><b>Note</b>: Use HTML headings for headings only. Don't use headings to make text BIG or bold.</p>
+            <h2>Bigger Headings</h2>
+            <p>Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS font-size property:</p>
+            <img src="/b1img/h3.PNG" alt="">
+        </section>
+
+
+
+        <section id="pa">
+            <h1>HTML Paragraphs</h1>
+            <p>The HTML <code>&lt;p&gt;</code> element defines a paragraph.</p>
+            <p>A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.</p>
+            <img src="/b1img/p1.PNG" alt="">
+            <h2>HTML Display</h2>
+            <p>You cannot be sure how HTML will be displayed.</p>
+            <p>Large or small screens, and resized windows will create different results.</p>
+            <p>With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.</p>
+            <p>The browser will automatically remove any extra spaces and lines when the page is displayed:</p>
+            <img src="/b1img/p2.PNG" alt="">
+            <h2>HTML Horizontal Rules</h2>
+            <p>The <code>&lt;hr&gt;</code> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+            <p>The <code>&lt;hr&gt;</code> element is used to separate content (or define a change) in an HTML page:</p>
+            <img src="/b1img/p3.PNG" alt="">
+            <p>The <code>&lt;hr&gt;</code> tag is an empty tag, which means that it has no end tag.</p>
+            <h2>HTML Line Breaks</h2>
+            <p>The HTML <code>&lt;br&gt;</code> element defines a line break.</p>
+            <p>Use <code>&lt;br&gt;</code> if you want a line break (a new line) without starting a new paragraph:</p>
+            <img src="/b1img/p4.PNG" alt="">
+            <h2>The Poem Problem</h2>
+            <img src="/b1img/p5.PNG" alt="">
+            <h2>Solution - The HTML <code>&lt;pre&gt;</code> Element</h2>
+            <p>The HTML <code>&lt;pre&gt;</code> element defines preformatted text.</p>
+            <p>The text inside a <code>&lt;pre&gt;</code> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:</p>
+            <img src="/b1img/p6.PNG" alt="">
+        </section>
+        <section id="st">
+            <h1>HTML Styles</h1>
+            <p>The HTML style attribute is used to add styles to an element, such as color, font, size, and more.</p>
+            <img src="/b1img/s1.PNG" alt="">
+            <h2>The HTML Style Attribute</h2>
+            <p>Setting the style of an HTML element, can be done with the style attribute.</p>
+            <p>The HTML style attribute has the following syntax:</p>
+            <img src="/b1img/s2.PNG" alt="">
+            <h2>Background Color</h2>
+            <p>The CSS background-color property defines the background color for an HTML element.</p>
+            <img src="/b1img/s3.PNG" alt="">
+            <h2>Text Color</h2>
+            <p>The CSS color property defines the text color for an HTML element:</p>
+            <img src="/b1img/s4.PNG" alt="">
+            <h2>Fonts</h2>
+            <p>The CSS font-family property defines the font to be used for an HTML element:</p>
+            <img src="/b1img/s5.PNG" alt="">
+            <h2>Text Size</h2>
+            <p>The CSS font-size property defines the text size for an HTML element:</p>
+            <img src="/b1img/s7.PNG" alt="">
+            <h2>Text Alignment</h2>
+            <p>The CSS text-align property defines the horizontal text alignment for an HTML element:</p>
+            <img src="/b1img/s8.PNG" alt="">
+        </section>
+        <section id="fo">
+            <h1>HTML Text Formatting</h1>
+            <p>HTML contains several elements for defining text with a special meaning.</p>
+            <h2>HTML Formatting Elements</h2>
+            <p>Formatting elements were designed to display special types of text:</p>
+                <ul>
+                    <li><code>&lt;b&gt;</code> - Bold text</li>
+                    <li><code>&lt;strong&gt;</code> - Important text</li>
+                    <li><code>&lt;i&gt;</code> - Italic text</li>
+                    <li><code>&lt;em&gt;</code> - Emphasized text</li>
+                    <li><code>&lt;mark&gt;</code> - Marked text</li>
+                    <li><code>&lt;small&gt;</code> - Smaller text</li>
+                    <li><code>&lt;del&gt;</code> - Deleted text</li>
+                    <li><code>&lt;ins&gt;</code> - Inserted text</li>
+                    <li><code>&lt;sub&gt;</code> - Subscript text</li>
+                    <li><code>&lt;sup&gt;</code> - Superscript text</li>
+                </ul>
+            <h2>HTML <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code> Elements</h2>
+            <p>The HTML <code>&lt;b&gt;</code> element defines bold text, without any extra importance.</p>
+            <img src="/b1img/f1.PNG" alt="">
+            <p>The HTML <code>&lt;strong&gt;</code> element defines text with strong importance. The content inside is typically displayed in bold.</p>
+            <img src="/b1img/f2.PNG" alt="">
+            <h2>HTML <code>&lt;i&gt;</code> and <code>&lt;em&gt;</code> Elements</h2>
+            <p>The HTML <code>&lt;i&gt;</code> element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.</p>
+            <p> <code>&lt;b&gt;</code>Tip:</b> The <code>&lt;i&gt;</code> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.</p>   
+            <img src="/b1img/f3.PNG" alt="">
+            <p>The HTML <code>&lt;em&gt;</code> element defines emphasized text. The content inside is typically displayed in italic.</p>
+            <img src="/b1img/f4.PNG" alt="">
+            <h2>HTML <code>&lt;small&gt;</code> Element</h2>
+                <p>The HTML <code>&lt;small&gt;</code> element defines smaller text:</p>
+                <img src="/b1img/f5.PNG" alt="">
+            <h2>HTML <code>&lt;mark&gt;</code> Element</h2>
+            <p>The HTML <code>&lt;mark&gt;</code> element defines text that should be marked or highlighted:</p>
+            <img src="/b1img/f6.PNG" alt="">
+            <h2>HTML <code>&lt;del&gt;</code> Element</h2>
+                <p>The HTML <code>&lt;del&gt;</code> element defines text that has been deleted from a document. Browsers will usually strike a line through deleted text:</p>
+                    <img src="/b1img/f7.PNG" alt="">
+            <h2>HTML <code>&lt;ins&gt;</code> Element</h2>
+                <p>The HTML <code>&lt;sub&gt;</code> element defines a text that has been inserted into a document. Browsers will usually underline inserted text:</p>
+            <img src="/b1img/f8.PNG" alt="">
+            <h2>HTML <code>&lt;sub&gt;</code> Element</h2>
+                <p>The HTML <code>&lt;sub&gt;</code> element defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H2O:</p>
+            <img src="/b1img/f9.PNG" alt="">
+            <h2>HTML <code>&lt;sup&gt;</code> Element</h2>
+                <p>The HTML <code>&lt;sup&gt;</code> element defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW[1]:</p>
+                    <img src="/b1img/f10.PNG" alt="">
+            
+        </section>
+
+
+        <section id="qu">
+            <h1>HTML Quotation and Citation Elements</h1>
+            <h2>HTML <code>&lt;blockquote&gt;</code>for Quotations</h2>
+                <p>The HTML <code>&lt;blockquote&gt;</code> element defines a section that is quoted from another source.</p>
+                <p>Browsers usually indent <code>&lt;blockquote&gt;</code> elements.</p>
+                <img src="./b1img/q1.PNG" alt="">
+            <h2>HTML <q> for Short Quotations</h2>
+            <p>The HTML <q> tag defines a short quotation. <br>Browsers normally insert quotation marks around the quotation.</p>
+            <img src="./b1img/q2.PNG" alt="">
+            <h2>HTML <abbr> for Abbreviations</h2>
+            <p>The HTML <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".</p>
+            <P>Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.</P> 
+            <img src="./b1img/q3.PNG" alt="">
+            <h2>HTML <address> for Contact Information</h2>
+                <p>The HTML <address> tag defines the contact information for the author/owner of a document or an article.</p>
+                <p>The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element.</p>
+                    <img src="./b1img/q4.PNG" alt="">
+            <h2>HTML <cite> for Work Title</h2>
+                <p>The HTML <cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).</p>
+                    <img src="./b1img/q5.PNG" alt="">
+            <h2>HTML <bdo> for Bi-Directional Override</h2>
+                <p>BDO stands for Bi-Directional Override.</p>
+                <p>The HTML <bdo> tag is used to override the current text direction:</p>
+                <img src="./b1img/q6.PNG" alt="">
+        
+        </section>
+        <section id="co">
+            <h1>HTML Comments</h1>
+            <h2>HTML Comment Tag</h2>
+            <p>You can add comments to your HTML source by using the following syntax:</p>
+            <img src="./b1img/c1.PNG" alt="">
+            <p>Notice that there is an exclamation point (!) in the start tag, but not in the end tag.</p>
+            <p>Note: Comments are not displayed by the browser, but they can help document your HTML source code.</p>
+            <h2>Add Comments</h2>
+            <p>With comments you can place notifications and reminders in your HTML code:</p>
+            <img src="" alt="">
+            <h2>Hide Content</h2>
+            <p>Comments can be used to hide content.</p>
+            <p>This can be helpful if you hide content temporarily:</p>
+            <img src="" alt="">
+            <h2>Hide Inline Content</h2>
+            <p>Comments can be used to hide parts in the middle of the HTML code.</p>
+            <img src="./b1img/c2.PNG" alt="">
+        </section>
+        <section id="col">
+            <h1>HTML Colors</h1>
+            <p>HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.</p>
+            <h2>Color Names</h2>
+            <p>In HTML, a color can be specified by using a color name:</p>
+            <!-- bảng màu-->
+             <h2 >Background Color</h2>
+             <img src="" alt="">
+             <p>Results:</p>
+             <h2 style="background-color: rgb(195, 0, 255);">Heading with purple Background</h2>
+             <p style="background-color: rgb(248, 244, 17);"> A volcano has erupted following a 7.0-magnitude earthquake that struck off Russia’s east coast, spurting a column of ash miles into the air, according to state-run media.</p>
+            
+            <h2>Text Color</h2>
+            <img src="./b1img/m1.PNG" alt="">
+            <p>results:</p>
+            <h3 style="color: blue;">HNMU</h3>
+            <p style="color: rgb(255, 0, 0);">Hanoi Metropolitant University</p>
+            <p style="color: rgb(30, 255, 0);">Information technology 2023 A</p>
+            <h2>Border Color</h2>
+            <img src="./b1img/m2.PNG" alt="">
+            <p>Results:</p>
+            <h2 style="border:3px solid blue;">HNMU</h2>
+            <h2 style="border: 4px solid red;"> CNTTD23A FIGHT</h2>
+            <h2>Color Values</h2>
+            <p>In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.</p>
+            <p>The following three <div> elements have their background color set with RGB, HEX, and HSL values:</p>
+            <img src="./b1img/m3.PNG" alt="">
+            <p>Results:</p>
+            <h1 style="background-color:rgb(255, 0, 0);">...</h1>
+            <h1 style="background-color:#ff0000;">...</h1>
+            <h1 style="background-color:hsl(0, 100%, 50%);">...</h1>
+
+            <h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+            <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+        </section>
+        <section id="li">
+            <h1>HTML Links</h1>
+            <p>Links are found in nearly all web pages. Links allow users to click their way from page to page.</p>
+            <h2>HTML Links - Hyperlinks</h2> 
+            <p>HTML links are hyperlinks. <br>
+                You can click on a link and jump to another document. <br>
+                When you move the mouse over a link, the mouse arrow will turn into a little hand.</p>
+                <p style="background-color: #fff461cc;">Note: A link does not have to be text. A link can be an image or any other HTML element</p>
+            <h2>HTML Links - Syntax</h2>
+            <p>The HTML <a> tag defines a hyperlink. It has the following syntax:</p>
+                <img src="" alt="">
+                <p>The most important attribute of the <a> element is the href attribute, which indicates the link's destination.</p>
+                <p>The link text is the part that will be visible to the reader.</p>
+                <p>Clicking on the link text, will send the reader to the specified URL address.</p>
+                <div style="background-color: #48ff00; border: 10px solid #48ff00; padding-bottom: 20px;" >
+                    <h5>Examples</h5>
+                    <a href="https://www.w3schools.com/" ">Visit W3Schools.com!</a>
+                </div>
+                <h2>HTML Links - The target Attribute</h2>
+                <p>By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.</p>
+                <p>The target attribute specifies where to open the linked document.</p>
+                <p>The target attribute can have one of the following values:</p>
+                <ul>
+                    <li>_self - Default. Opens the document in the same window/tab as it was clicked</li>
+                    <li>_blank - Opens the document in a new window or tab</li>
+                    <li>_parent - Opens the document in the parent frame</li>
+                    <li>_top - Opens the document in the full body of the window</li>
+                </ul>
+                <P>Example</P>
+                <p>Use target="_blank" to open the linked document in a new browser window or tab:</p>
+                <h2>Absolute URLs vs. Relative URLs</h2>
+                <p>Both examples above are using an absolute URL (a full web address) in the href attribute.</p>
+                <img src="./b1img/l1.PNG" alt="">
+                <h2>HTML Links - Use an Image as a Link</h2>
+                <p>To use an image as a link, just put the <img> tag inside the <a> tag:</p>
+                    <img src="./b1img/l2.PNG" alt="">
+                <h2>Link to an Email Address</h2>
+                <p>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):</p>
+                    <img src="" alt="">
+                <h2>Button as a Link</h2>
+                <p>To use an HTML button as a link, you have to add some JavaScript code. <br>JavaScript allows you to specify what happens at certain events, such as a click of a button:</p>
+                    <img src="./b1img/l3.PNG" alt="">
+                <h2>Link Titles</h2>
+                <p>The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.</p>
+                    <img src="" alt="">
+                <h2>HTML Link Colors</h2>
+                <p>You can change the link state colors, by using CSS:</p>
+                <img src="./b1img/l4.PNG" alt="">
+                <h2>Link Buttons</h2>
+                <img src="" alt="">
+        </section>
+        <section id="im">
+            <h1>HTML Images</h1>
+            <img src="" alt="">
+            <p>The HTML <img> tag is used to embed an image in a web page.</p>
+            <p>Images are not technically inserted into a web page; images are linked to web pages. The <img> tag creates a holding space for the referenced image.</p>
+            <p>The <img> tag has two required attributes:</p>
+            <ul>
+                <li>src - Specifies the path to the image</li>
+                <li>alt - Specifies an alternate text for the image</li>
+            </ul>
+            <img src="./b1img/z1.PNG" alt="">
+            <h2>Image Size - Width and Height</h2>
+            <p>You can use the style attribute to specify the width and height of an image.</p>
+            <img src="./b1img/z2.PNG" alt="">
+            <h2>Images in Another Folder</h2>
+            <p>If you have your images in a sub-folder, you must include the folder name in the src attribute:</p>
+            <h2>Images on Another Server/Website</h2>
+            <p>To point to an image on another server, you must specify an absolute (full) URL in the src attribute:</p>
+            <h2>Animated Images</h2>
+            <img src="./b1img/z3.PNG" alt="">
+            <h2>Image as a Link</h2>
+            <a href=""><img src="./b1img/z4.PNG" alt=""></a>
+            <h2>Image Floating</h2>
+            <img src="./b1img/z5.PNG" alt="">
+        </section>
+ 
+        <section id="ta">
+            <h1>HTML Tables</h1>
+            <p>HTML tables allow web developers to arrange data into rows and columns.</p>
+            <img src="" alt="">
+            <h2>Define an HTML Table</h2>
+            <p>A table in HTML consists of table cells inside rows and columns.</p>
+            <img src="./b1img/t1.PNG" alt="">
+            <h2>Table Cells</h2>
+            <p>Each table cell is defined by a <td> and a </td> tag. <br>td stands for table data.</p>
+            <p>Everything between <td> and </td> are the content of the table cell.           </p>
+            <img src="" alt="">
+            <h2>Table Rows</h2>
+            <p>Each table row starts with a <tr> and ends with a </tr> tag. <br>tr stands for table row.</p>
+            <img src="./b1img/t2.PNG" alt="">
+            <h2>Table Headers</h2>
+            <p>Sometimes you want your cells to be table header cells. In those cases use the <th> tag instead of the <td> tag:</p>
+            <img src="" alt="">
+
+        </section>
+        <section id="lis">
+            <h1>HTML Lists</h1>
+            <p>HTML lists allow web developers to group a set of related items in lists.</p>
+            <img src="" alt="">
+            <h2>Unordered HTML List</h2>
+            <p>An unordered list starts with the <ul> tag. Each list item starts with the <li> tag.</p>
+            <p>The list items will be marked with bullets (small black circles) by default:</p>
+                <img src="" alt="">
+            <h2>Ordered HTML List</h2>
+            <p>An ordered list starts with the <ol> tag. Each list item starts with the <li> tag.</p>
+                <img src="" alt="">
+            <h2>HTML Description Lists</h2>
+            <p>A description list is a list of terms, with a description of each term.</p>
+            <p>The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:</p>
+            <img src="" alt="">
+ 
+        </section>
+        <section id="bl">
+            <h1>HTML Block and Inline Elements</h1>
+            <p>Every HTML element has a default display value, depending on what type of element it is. <br>The two most common display values are block and inline.</p>
+            <h2>Block-level Elements</h2>
+            <p>A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.</p>
+            <p>A block-level element always takes up the full width available (stretches out to the left and right as far as it can).</p>
+            <p>Two commonly used block elements are: <p> and <div>. <br>
+            The <p> element defines a paragraph in an HTML document. <br>
+            The <div> element defines a division or a section in an HTML document.</p>
+                <img src="./b1img/f4.PNG" alt="">
+            <p>Here are the block-level elements in HTML:</p>
+            <img src="" alt="">
+            <h2>Inline Elements</h2>
+            <p>An inline element does not start on a new line. <br>
+            An inline element only takes up as much width as necessary.</p>
+            <img src="./b1img/h3.PNG" alt="">
+            <p>Here are the inline elements in HTML:</p>
+            <img src="" alt="">
+            <h2>The <div> Element</h2>
+                <p>The <div> element is often used as a container for other HTML elements.</p>
+                <p>When used together with CSS, the <div> element can be used to style blocks of content:</p>
+                <img src="./b1img/p5.PNG" alt="">
+            <h2>The <span> Element</h2>
+            <p>The <span> element is an inline container used to mark up a part of a text, or a part of a document.</p>
+            <p>When used together with CSS, the <span> element can be used to style parts of the text:</p>
+                <img src="./b1img/q4.PNG" alt="">
+
+        </section>
+
+    </div>
+</body>
+</html>
