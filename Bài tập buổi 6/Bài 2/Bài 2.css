@@ -7,6 +7,10 @@ body {
     margin: 0 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 ::selection {
     background-color: black; /* Màu nền khi chọn văn bản */
     color: white; /* Màu chữ khi chọn văn bản */
@@ -17,11 +21,18 @@ body {
     display: flex;
     justify-content: center;
     height: 800px;
+    width: 100vw;
 }
 
 .first .backimg {
     position: absolute;
     height: 800px;
+    width: 100vw;
+}
+
+.first .backimg img {
+    height: 800px;
+    width: 100vw;
 }
 
 .first .nav {
