@@ -242,6 +242,10 @@ body{
     font-size: 30px;
 }
 
+.project-detail-link{
+    color: #ff8c94;
+}
+
 .project-detail-link a:link, a:visited, a:hover, a:active{
     color: #ff8c94;
 }
