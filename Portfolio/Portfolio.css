@@ -1,9 +1,11 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
 }
 
 body{
-    font-family: "Open Sans", sans-serif;
     margin: 0;
     overflow: hidden;
     overflow-x: hidden;
@@ -13,33 +15,111 @@ body{
 
 /*Banner*/
 .banner{
+    background-image: url(Ảnh/Sunflower.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
     position: relative;
     width: 100%;
     height: 700px;
     overflow: hidden;
 }
 
-.background-image{
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-
-}
-
-#background-image{
-    width: 100%;
-    height: 100%;
-}
-
-.black-layer{
-    position: absolute;
-    top: 0;
-    left: 0;
+.background-overlay{
     background-color: black;
     opacity: 50%;
     width: 100%;
     height: 100%;
 }
+
+/*Side bar*/
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Ngăn cuộn ngang */
+}
+
+.menu {
+    z-index: 999;
+}
+
+.menu-icon {
+    font-size: 30px;
+    color: #ff8c94;
+    position: fixed;
+    top: 100px;
+    right: 114px;
+    cursor: pointer;
+}
+
+.side-bar {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: -275px; /* Bắt đầu ngoài màn hình */
+    height: 100%;
+    width: 275px;
+    background-color: #ff8c94;
+    box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+}
+
+.side-bar.open {
+    right: 0; /* Hiện menu */
+}
+
+.side-bar li {
+    transition: background 0.3s;
+}
+
+.side-bar-content {
+    padding: 30px 16px;
+}
+
+.side-bar-lists {
+    list-style: none;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.list {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+}
+
+.list:hover {
+    background-color: white;
+    color: #ff8c94;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 900;
+}
+
+.menu-overlay.active {
+    display: block; /* Hiện overlay */
+}
+/*End of Side bar*/
 
 .logo-place{
     position: absolute;
@@ -72,9 +152,13 @@ body{
     position: absolute;
     bottom: 100px;
     left: 114px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: normal;
     color: white;
+}
+
+.social-media{
+    font-size: 20px;
 }
 
 .discord, .instagram, .facebook{
@@ -99,7 +183,7 @@ body{
     right: 114px;
 }
 
-.social-media a:link, a:visited, a:hover, a:active{
+.social-media:link, .social-media:visited, .social-media:hover, .social-media:active{
     color: white;
 }
 
@@ -227,7 +311,7 @@ body{
 }
 
 .project-paragraph{
-    margin-top: -48px;
+    margin-top: -12.5px;
     margin-left: 70px;
 }
 
@@ -236,17 +320,34 @@ body{
     font-size: 35px;
     font-weight: bold;
     max-width: 721px;
+    margin-bottom: 10px;
 }
 
 .project-paragraph-line{
     font-size: 30px;
+    list-style-type: none;
+}
+
+.project-paragraph-line li {
+    position: relative;
+    padding-left: 40px; /* Khoảng cách cho các mục */
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+}
+
+.project-paragraph-line li::before {
+    content: "."; /* Tạo bullet */
+    color: #ff8c94; /* Màu sắc của bullet */
+    font-size: 60px; /* Kích thước bullet */
+    position: absolute;
+    left: 0;
+    top: -40px;
 }
 
 .project-detail-link{
     color: #ff8c94;
 }
 
-.project-detail-link a:link, a:visited, a:hover, a:active{
+.project-detail-link:link, .project-detail-link:visited, .project-detail-link:hover, .project-detail-link:active{
     color: #ff8c94;
 }
 
