@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            transition: background-color 0.3s ease;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -250px; /* Bắt đầu ngoài màn hình */
+            width: 250px;
+            height: 100%;
+            background-color: #FFB6C1;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+            transition: right 0.3s ease;
+            z-index: 2;
+        }
+        
+        .sidebar.open {
+            right: 0; /* Hiện menu */
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 20px;
+        }
+        
+        .sidebar li {
+            padding: 10px 0;
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .sidebar li:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .open-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #FFB6C1;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        
+        .open-btn:hover {
+            background-color: #FF69B4;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    <nav class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeMenu()">✖</button>
+        <ul>
+            <li>Bài tập buổi 1</li>
+            <li>Bài tập buổi 2</li>
+            <li>Bài tập buổi 3</li>
+            <li>Bài tập buổi 4</li>
+            <li>Bài tập buổi 5</li>
+            <li>Bài tập buổi 6</li>
+            <li>Bài tập buổi 7</li>
+            <li>Bài tập buổi 8</li>
+            <li>Bài tập buổi 9</li>
+            <li>Bài tập buổi 10</li>
+        </ul>
+    </nav>
+    <button class="open-btn" onclick="openMenu()">Open Menu</button>
+    <script>
+        function openMenu() {
+            document.getElementById("sidebar").classList.add("open");
+            document.getElementById("overlay").style.display = "block";
+        }
+        
+        function closeMenu() {
+            document.getElementById("sidebar").classList.remove("open");
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</body>
+</html>
