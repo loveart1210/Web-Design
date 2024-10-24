@@ -51,13 +51,29 @@
     </style>
 </head>
 <body>
-    <a href="https://loveart1210.github.io/Web-Design/Portfolio/Portfolio.html" class="home-icon"><i class="fa-solid fa-house"></i></a>
-    <script>
-        document.querySelector('.home-icon').addEventListener('click', (event) => {
-            event.preventDefault(); 
-            window.location.href = 'Portfolio.html'; 
-        });
-    </script>
+    <a href="Portfolio.html" class="home-icon"><i class="fa-solid fa-house"></i></a>
+<script>
+    document.querySelector('.home-icon').addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        // Thử tải Portfolio.html
+        fetch('Portfolio.html')
+            .then(response => {
+                if (response.ok) {
+                    // Nếu tải thành công, chuyển hướng
+                    window.location.href = 'Portfolio.html';
+                } else {
+                    // Nếu không tìm thấy file, thông báo lỗi
+                    alert("Không tìm thấy Portfolio.html. Vui lòng kiểm tra lại đường dẫn.");
+                }
+            })
+            .catch(error => {
+                console.error('Lỗi kết nối:', error);
+                alert("Không thể kết nối đến Portfolio.html. Vui lòng kiểm tra lại.");
+            });
+    });
+</script>
+
     <h1>Bài tập về nhà</h1>
     <ul>
         <li><a href="https://loveart1210.github.io/Web-Design/B%C3%A0i%20t%E1%BA%ADp%20bu%E1%BB%95i%201/B%C3%A0i%20t%E1%BA%ADp%20tr%C3%AAn%20l%E1%BB%9Bp%20bu%E1%BB%95i%201/B%C3%A0i%20t%E1%BA%ADp%20tr%C3%AAn%20l%E1%BB%9Bp%20bu%E1%BB%95i%201.html" target="_blank">Bài tập trên lớp buổi 1</a></li>
